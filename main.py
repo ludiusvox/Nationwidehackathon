@@ -85,7 +85,7 @@ def main():
     call(assertz(year("kai","ug")), module=test1)
     call(assertz(interest("kai","security")), module=test1)
 
-
+    pro.consult('nationwide.pl')
 
     print("Querying major(X,Y) for {name}...".format(name=name))
     X= Variable()
@@ -101,13 +101,18 @@ def main():
         print(Y.value)
     newquery.closeQuery()
 
+    interests = str(input("What is your interest? "))
 
     #------------
-    pro.consult('nationwide.pl')
-    results = list(pro.query("interestrelation(X,Y)"))
 
-    print("Querying interestrelation(X,Y)...")
-    for result in results:
-        print(result["X"] , result["Y"])
+    Q = Variable()
+    Z = Variable()
+
+
+    query = pro.query("interestcompatible({interests},Y,Z)".format(interests=interests))
+    for i in query:
+        print(i["Z"], i["Y"])
+
+
 if __name__ == "__main__":
     main()
