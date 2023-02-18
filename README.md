@@ -11,3 +11,24 @@ TODO:
 
 Form "Join Queries"
 Form "Group By Queries"
+
+
+Update 1:15 AM join works sortof:
+
+Welcome to WSSU Hackathon 2023
+This is a demonstration of prolog knowlegebase and chatbot
+Studies have shown that not all students are aware of the resources available to them
+What is your name? tahron
+What is your major? I want to tell you about other fellow majors cs
+Querying major(X,Y) for tahron...
+cs
+Querying all the majors of cs...
+aaron
+tionna
+clavine
+tahron
+camden
+What is your interest? ug
+tionna ug
+lloyd ug
+tahron ug
